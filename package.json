@@ -11,6 +11,9 @@
   "keywords": [
     "typescript"
   ],
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "changelog": "standard-changelog",
     "docs": "typedoc --options typedoc.markdown.json",

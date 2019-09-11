@@ -18,7 +18,8 @@
       "es2017",
       "es2017.object",
       "es2017.sharedmemory",
-      "es2017.typedarrays"
+      "es2017.typedarrays",
+      "esnext.bigint"
     ],
     "strict": true,
     "esModuleInterop": true,

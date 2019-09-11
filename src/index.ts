@@ -20,7 +20,7 @@ export function isArray(arg: unknown): arg is any[] {
  * @returns {arg is bigint}
  */
 export function isBigInt(arg: unknown): arg is bigint {
-  return typeof arg === 'bigint';
+  return typeof arg === "bigint";
 }
 
 /**
@@ -31,7 +31,7 @@ export function isBigInt(arg: unknown): arg is bigint {
  * @returns {arg is boolean}
  */
 export function isBoolean(arg: unknown): arg is boolean {
-  return typeof arg === 'boolean';
+  return typeof arg === "boolean";
 }
 
 /**
@@ -53,7 +53,7 @@ export function isDate(arg: unknown): arg is Date {
  * @returns {arg is (... args: any[]) => any}
  */
 export function isFunction(arg: unknown): arg is FunctionType {
-  return typeof arg === 'function';
+  return typeof arg === "function";
 }
 
 /**
@@ -72,21 +72,10 @@ export function isIterable(arg: unknown): arg is Iterable<any> {
  *
  * @export
  * @param {unknown} arg
- * @returns {arg is IterableIterator<any>}
- */
-export function isIterableIterator(arg: unknown): arg is IterableIterator<any> {
-  return isIterable(arg) && 'next' in arg && 'return' in arg && 'throw' in arg;
-}
-
-/**
- *
- *
- * @export
- * @param {unknown} arg
  * @returns {arg is number}
  */
 export function isNumber(arg: unknown): arg is number {
-  return typeof arg === 'number';
+  return typeof arg === "number";
 }
 
 /**
@@ -97,7 +86,7 @@ export function isNumber(arg: unknown): arg is number {
  * @returns {arg is object}
  */
 export function isPlainObject(arg: unknown): arg is object {
-  return typeof arg === 'object' && !isArray(arg) && arg !== null;
+  return typeof arg === "object" && !isArray(arg) && arg !== null;
 }
 
 /**
@@ -108,7 +97,7 @@ export function isPlainObject(arg: unknown): arg is object {
  * @returns {arg is object}
  */
 export function isObject(arg: unknown): arg is object {
-  return typeof arg === 'object';
+  return typeof arg === "object";
 }
 
 /**
@@ -130,7 +119,7 @@ export function isNull(arg: unknown): arg is null {
  * @returns {arg is string}
  */
 export function isString(arg: unknown): arg is string {
-  return typeof arg === 'string';
+  return typeof arg === "string";
 }
 
 /**
@@ -141,7 +130,7 @@ export function isString(arg: unknown): arg is string {
  * @returns {arg is symbol}
  */
 export function isSymbol(arg: unknown): arg is symbol {
-  return typeof arg === 'symbol';
+  return typeof arg === "symbol";
 }
 
 /**
@@ -163,7 +152,10 @@ export function isUndefined(arg: unknown): arg is undefined {
  * @param {string} key
  * @returns {arg is Pick<any, typeof key>}
  */
-export function hasKey(arg: unknown, key: string): arg is Pick<any, typeof key> {
+export function hasKey(
+  arg: unknown,
+  key: string
+): arg is Pick<any, typeof key> {
   return isObject(arg) && key in arg;
 }
 
@@ -177,6 +169,10 @@ export function hasKey(arg: unknown, key: string): arg is Pick<any, typeof key> 
  * @param {TypeGuard<T>} typeguard
  * @returns {arg is Record<typeof key, T>}
  */
-export function hasKeyOfType<T>(arg: unknown, key: string, typeguard: TypeGuard<T>): arg is Record<typeof key, T> {
+export function hasKeyOfType<T>(
+  arg: unknown,
+  key: string,
+  typeguard: TypeGuard<T>
+): arg is Record<typeof key, T> {
   return hasKey(arg, key) && typeguard((arg as any)[key]);
 }
