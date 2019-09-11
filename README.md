@@ -1,33 +1,20 @@
-typescript library template
-===========================
+typeguards
+==========
 
-Your library description
+Everyday use typeguards for your JavaScript and TypeScript codebase
 
 # 🎉 Features
 
-Add your library features here.
-
-📦 This template already has (out of the box):
-
-* preconfigured jest (with ts-jest) for testing your library
-* azure dev-ops configuration
-* travis-ci configuration, just add your repo to travis and you have done
-* codecov setup
-* tsconfig.json configurated for node.js libraries
-* eslint/prettier you have eslint/prettier preconfigured, your code will be linted at commit time automatically
-* github issue templates, they are already there, just configure them
-* contributing guidelines and code of conduct are already setupped
-* size-limit script, for checking the weight of your library
-* automatic docs generation with [typedoc](https://github.com/TypeStrong/typedoc)
+This library grants you a list of typeguards functions to check if certain data are of a certain type
 
 # ⚙ Install
 
 ```bash
 # npm
-npm i mylib
+npm i typeguards
 
 # yarn
-yarn add mylib
+yarn add typeguards
 ```
 
 # 📖 Docs
@@ -36,7 +23,21 @@ You can read docs [here](./docs/README.md), just remember to run your `npm run d
 
 # 🔍 Usage
 
-Put my library usage guide here
+```typescript
+// maybe-a-hello-world.ts
+
+export default function maybeAnHelloWorld() {
+  console.log('hello world');
+}
+
+// app.ts
+import * as guards from 'typeguards';
+import maybeAnHelloWorld from './maybe-a-hello-world';
+
+if (guards.isFunction(maybeAnHelloWorld)) {
+  maybeAnHelloWorld(); // logs hello world
+}
+```
 
 # ️❤️ Contributing
 

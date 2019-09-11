@@ -1,15 +1,22 @@
 {
-  "name": "typescript-node-lib",
-  "version": "0.0.0",
+  "name": "typeguards",
+  "version": "0.5.0",
   "licence": "MIT",
   "author": {
-    "name": "name",
-    "email": "email@domain.com"
+    "name": "Paolo Roth",
+    "email": "iamoctod@gmail.com"
   },
   "main": "dist/index.js",
-  "description": "your typescript library description",
+  "description": "Everyday use typeguards for your JavaScript and TypeScript codebase",
   "keywords": [
-    "typescript"
+    "typescript",
+    "type checking",
+    "functional programming",
+    "library",
+    "octod",
+    "type",
+    "guards",
+    "typeguards"
   ],
   "engines": {
     "node": "12"

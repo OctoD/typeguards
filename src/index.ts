@@ -2,7 +2,12 @@ export type FunctionType = (...args: any[]) => any;
 export type TypeGuard<TReturn> = (arg: unknown) => arg is TReturn;
 
 /**
+ * Returns `true` if the passed argument is an array
  *
+ * ```ts
+ * isArray([]) // true
+ * isArray(100) // false
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -13,7 +18,12 @@ export function isArray(arg: unknown): arg is any[] {
 }
 
 /**
+ * Returns `true` if the passed argument is a BigInt
  *
+ * ```ts
+ * isBigInt(100) // false
+ * isBigInt(BigInt(100)) // false
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -24,7 +34,13 @@ export function isBigInt(arg: unknown): arg is bigint {
 }
 
 /**
+ * Returns `true` if the passed argument is a boolean
  *
+ * ```ts
+ * isBoolean(false) // true
+ * isBoolean(0) // false
+ * isBoolean(!0) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -35,7 +51,12 @@ export function isBoolean(arg: unknown): arg is boolean {
 }
 
 /**
+ * Returns `true` if the passed argument is a Date
  *
+ * ```ts
+ * isDate(10) // false
+ * isDate(new Date()) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -46,7 +67,12 @@ export function isDate(arg: unknown): arg is Date {
 }
 
 /**
+ * Returns `true` if the passed argument is a Function
  *
+ * ```ts
+ * isFunction(Object) // true
+ * isFunction(Object()) // false
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -57,7 +83,13 @@ export function isFunction(arg: unknown): arg is FunctionType {
 }
 
 /**
+ * Returns `true` if the passed argument is Iterable
  *
+ * ```ts
+ * isIterable(100) // false
+ * isIterable([]) // true
+ * isIterable(new Map()) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -68,7 +100,12 @@ export function isIterable(arg: unknown): arg is Iterable<any> {
 }
 
 /**
+ * Returns `true` if the passed argument is a number
  *
+ * ```ts
+ * isNumber(10) // true
+ * isNumber('10') // false
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -79,7 +116,13 @@ export function isNumber(arg: unknown): arg is number {
 }
 
 /**
+ * Returns `true` if the passed argument is a plain object
  *
+ * ```ts
+ * isPlainObject([]) // false
+ * isPlainObject({}) // true
+ * isPlainObject(new class {}) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -90,7 +133,13 @@ export function isPlainObject(arg: unknown): arg is object {
 }
 
 /**
+ * Returns `true` if the passed argument is an object
  *
+ * ```ts
+ * isObject(10) // false
+ * isObject([10]) // true
+ * isObject({}) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -101,7 +150,13 @@ export function isObject(arg: unknown): arg is object {
 }
 
 /**
+ * Returns `true` if the passed argument is null
  *
+ * ```ts
+ * isNull(undefined) // false
+ * isNull({}) // false
+ * isNull(null) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -112,7 +167,12 @@ export function isNull(arg: unknown): arg is null {
 }
 
 /**
+ * Returns `true` if the passed argument is a string
  *
+ * ```ts
+ * isString(100) // false
+ * isString('100') // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -123,7 +183,12 @@ export function isString(arg: unknown): arg is string {
 }
 
 /**
+ * Returns `true` if the passed argument is a symbol
  *
+ * ```ts
+ * isSymbol(100) // false
+ * isSymbol(Symbol('foo')) // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -134,7 +199,14 @@ export function isSymbol(arg: unknown): arg is symbol {
 }
 
 /**
+ * Returns `true` if the passed argument is undefined
  *
+ * ```ts
+ * isUndefined(undefined) // true
+ * isUndefined(void 0) // true
+ * isUndefined((() => {})()) // true
+ * isUndefined(123) // false
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -145,7 +217,12 @@ export function isUndefined(arg: unknown): arg is undefined {
 }
 
 /**
+ * Returns `true` if the passed argument is an object and has a key
  *
+ * ```ts
+ * hasKey({}, 'foo') // false
+ * hasKey({ foo: 100 }, 'foo') // true
+ * ```
  *
  * @export
  * @param {unknown} arg
@@ -160,7 +237,13 @@ export function hasKey(
 }
 
 /**
+ * Returns `true` if the passed argument is an object and has a key of a type specified by a typeguard
  *
+ * ```ts
+ * hasKeyOfType({}, 'foo', isString) // false
+ * hasKeyOfType({ foo: 100 }, 'foo', isString) // false
+ * hasKeyOfType({ foo: 'hello world' }, 'foo', isString) // true
+ * ```
  *
  * @export
  * @template T
