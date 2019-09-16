@@ -77,6 +77,12 @@ describe(`mylib`, () => {
     expect(guards.isPlainObject([])).toBeFalsy();
   });
 
+  testfn(guards.isRegExp, () => {
+    expect(guards.isRegExp(null)).toBeFalsy();
+    expect(guards.isRegExp(/[a-z]{1,}/)).toBeTruthy();
+    expect(guards.isRegExp(new RegExp("[a-z]{1,}"))).toBeTruthy();
+  });
+
   testfn(guards.isString, () => {
     expect(guards.isString(1)).toBeFalsy();
     expect(guards.isString("1")).toBeTruthy();

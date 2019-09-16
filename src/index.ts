@@ -167,6 +167,22 @@ export function isNull(arg: unknown): arg is null {
 }
 
 /**
+ * Returns `true` if the passed argument is a RegExp
+ *
+ * ```ts
+ * isRegExp(null) // false
+ * isRegExp(/[a-z]{1,}/) // false
+ * ```
+ *
+ * @export
+ * @param {unknown} arg
+ * @returns {arg is RegExp}
+ */
+export function isRegExp(arg: unknown): arg is RegExp {
+  return arg instanceof RegExp;
+}
+
+/**
  * Returns `true` if the passed argument is a string
  *
  * ```ts

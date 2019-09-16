@@ -1,4 +1,4 @@
-**[typescript-node-lib](../README.md)**
+**[typeguards](../README.md)**
 
 [Globals](../README.md) › ["index"](_index_.md)
 
@@ -25,6 +25,7 @@
 * [isNumber](_index_.md#isnumber)
 * [isObject](_index_.md#isobject)
 * [isPlainObject](_index_.md#isplainobject)
+* [isRegExp](_index_.md#isregexp)
 * [isString](_index_.md#isstring)
 * [isSymbol](_index_.md#issymbol)
 * [isUndefined](_index_.md#isundefined)
@@ -35,7 +36,7 @@
 
 Ƭ **FunctionType**: *function*
 
-*Defined in [index.ts:1](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L1)*
+*Defined in [index.ts:1](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L1)*
 
 #### Type declaration:
 
@@ -53,7 +54,7 @@ ___
 
 Ƭ **TypeGuard**: *function*
 
-*Defined in [index.ts:2](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L2)*
+*Defined in [index.ts:2](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L2)*
 
 #### Type declaration:
 
@@ -71,7 +72,7 @@ Name | Type |
 
 ▸ **hasKey**(`arg`: unknown, `key`: string): *boolean*
 
-*Defined in [index.ts:232](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L232)*
+*Defined in [index.ts:248](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L248)*
 
 Returns `true` if the passed argument is an object and has a key
 
@@ -97,7 +98,7 @@ ___
 
 ▸ **hasKeyOfType**<**T**>(`arg`: unknown, `key`: string, `typeguard`: [TypeGuard](_index_.md#typeguard)‹T›): *boolean*
 
-*Defined in [index.ts:255](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L255)*
+*Defined in [index.ts:271](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L271)*
 
 Returns `true` if the passed argument is an object and has a key of a type specified by a typeguard
 
@@ -131,7 +132,7 @@ ___
 
 ▸ **isArray**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:16](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L16)*
+*Defined in [index.ts:16](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L16)*
 
 Returns `true` if the passed argument is an array
 
@@ -156,7 +157,7 @@ ___
 
 ▸ **isBigInt**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:32](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L32)*
+*Defined in [index.ts:32](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L32)*
 
 Returns `true` if the passed argument is a BigInt
 
@@ -181,7 +182,7 @@ ___
 
 ▸ **isBoolean**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:49](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L49)*
+*Defined in [index.ts:49](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L49)*
 
 Returns `true` if the passed argument is a boolean
 
@@ -207,7 +208,7 @@ ___
 
 ▸ **isDate**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:65](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L65)*
+*Defined in [index.ts:65](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L65)*
 
 Returns `true` if the passed argument is a Date
 
@@ -232,7 +233,7 @@ ___
 
 ▸ **isFunction**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:81](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L81)*
+*Defined in [index.ts:81](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L81)*
 
 Returns `true` if the passed argument is a Function
 
@@ -257,7 +258,7 @@ ___
 
 ▸ **isIterable**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:98](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L98)*
+*Defined in [index.ts:98](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L98)*
 
 Returns `true` if the passed argument is Iterable
 
@@ -283,7 +284,7 @@ ___
 
 ▸ **isNull**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:165](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L165)*
+*Defined in [index.ts:165](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L165)*
 
 Returns `true` if the passed argument is null
 
@@ -309,7 +310,7 @@ ___
 
 ▸ **isNumber**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:114](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L114)*
+*Defined in [index.ts:114](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L114)*
 
 Returns `true` if the passed argument is a number
 
@@ -334,7 +335,7 @@ ___
 
 ▸ **isObject**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:148](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L148)*
+*Defined in [index.ts:148](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L148)*
 
 Returns `true` if the passed argument is an object
 
@@ -360,7 +361,7 @@ ___
 
 ▸ **isPlainObject**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:131](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L131)*
+*Defined in [index.ts:131](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L131)*
 
 Returns `true` if the passed argument is a plain object
 
@@ -382,11 +383,36 @@ Name | Type |
 
 ___
 
+###  isRegExp
+
+▸ **isRegExp**(`arg`: unknown): *boolean*
+
+*Defined in [index.ts:181](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L181)*
+
+Returns `true` if the passed argument is a RegExp
+
+```ts
+isRegExp(null) // false
+isRegExp(/[a-z]{1,}/) // false
+```
+
+**`export`** 
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`arg` | unknown |
+
+**Returns:** *boolean*
+
+___
+
 ###  isString
 
 ▸ **isString**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:181](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L181)*
+*Defined in [index.ts:197](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L197)*
 
 Returns `true` if the passed argument is a string
 
@@ -411,7 +437,7 @@ ___
 
 ▸ **isSymbol**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:197](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L197)*
+*Defined in [index.ts:213](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L213)*
 
 Returns `true` if the passed argument is a symbol
 
@@ -436,7 +462,7 @@ ___
 
 ▸ **isUndefined**(`arg`: unknown): *boolean*
 
-*Defined in [index.ts:215](https://github.com/OctoD/typeguards/blob/6b30a52/src/index.ts#L215)*
+*Defined in [index.ts:231](https://github.com/OctoD/typeguards/blob/81c4664/src/index.ts#L231)*
 
 Returns `true` if the passed argument is undefined
 

@@ -1,4 +1,4 @@
-**[typescript-node-lib](README.md)**
+**[typeguards](README.md)**
 
 [Globals](README.md)
 
