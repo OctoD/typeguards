@@ -40,6 +40,15 @@ describe(`mylib`, () => {
     expect(guards.isDate(new Date())).toBeTruthy();
   });
 
+  testfn(guards.isError, () => {
+    expect(guards.isError(10)).toBeFalsy();
+    expect(guards.isError({})).toBeFalsy();
+    expect(guards.isError(new Error())).toBeTruthy();
+    expect(
+      guards.isError({ name: "FooError", message: "Error of some type" })
+    ).toBeTruthy();
+  });
+
   testfn(guards.isFunction, () => {
     expect(guards.isFunction(1)).toBeFalsy();
     expect(guards.isFunction(jest.fn)).toBeTruthy();

@@ -67,6 +67,28 @@ export function isDate(arg: unknown): arg is Date {
 }
 
 /**
+ * Returns `true` if the passed argument is an Error
+ *
+ * ```ts
+ * isError(10) // false
+ * isError({}) // false
+ * isError(new Error()) // true
+ * isError({ name: 'FooError', message: 'Error of some type' }) // true
+ * ```
+ *
+ * @export
+ * @param {unknown} arg
+ * @returns {arg is Error}
+ */
+export function isError(arg: unknown): arg is Error {
+  return (
+    typeof arg === "object" &&
+    "name" in (arg as any) &&
+    "message" in (arg as any)
+  );
+}
+
+/**
  * Returns `true` if the passed argument is a Function
  *
  * ```ts
