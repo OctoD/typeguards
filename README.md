@@ -11,10 +11,10 @@ This library grants you a list of typeguards functions to check if certain data 
 
 ```bash
 # npm
-npm i typeguards
+npm i @octod/typeguards
 
 # yarn
-yarn add typeguards
+yarn add @octod/typeguards
 ```
 
 # 📖 Docs
